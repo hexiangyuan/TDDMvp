@@ -20,11 +20,11 @@ public class LoginPresenter implements LoginContract.Presenter {
 
     @Override
     public void onLoginButtonClick() {
-        if(mView.getUserName().isEmpty()){
+        if(TextUtils.isEmpty(mView.getUserName())){
            mView.showUserNameIsEmptyMsg(R.string.user_name_tmpty);
             return;
         }
-        if(mView.getPassword().isEmpty()){
+        if(TextUtils.isEmpty(mView.getPassword()){
             mView.showPassWordIsEmpty(R.string.password_tmpty);
             return;
         }
